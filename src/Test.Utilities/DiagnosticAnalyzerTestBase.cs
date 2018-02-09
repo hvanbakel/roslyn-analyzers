@@ -275,7 +275,7 @@ namespace Test.Utilities
         protected void VerifyCSharp(string source, FileAndSource additionalText, params DiagnosticResult[] expected)
         {
             var additionalFiles = GetAdditionalTextFiles(additionalText.FilePath, additionalText.Source);
-            Verify(source, LanguageNames.CSharp, GetBasicDiagnosticAnalyzer(), additionalFiles, compilationOptions: null, parseOptions: null, expected: expected);
+            Verify(source, LanguageNames.CSharp, GetCSharpDiagnosticAnalyzer(), additionalFiles, compilationOptions: null, parseOptions: null, expected: expected);
         }
 
         protected void VerifyBasic(string source, params DiagnosticResult[] expected)
